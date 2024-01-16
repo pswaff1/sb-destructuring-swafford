@@ -7,7 +7,6 @@
 
 // Object Destructuring 1
 const Obj_Destructuring_1 = () => {
-    
     // Declares an object with two attributes: numPlanets and
     // yearNeptuneDiscovered and sets them to 8 and 1846
     // respectively
@@ -33,7 +32,6 @@ const Obj_Destructuring_1 = () => {
 
 // Object Destructuring 2
 const Obj_Destructuring_2 = () => {
-    
     // Declares an object with three attributes: numPlanets,
     // yearNeptuneDiscovered, and yearMarsDiscoverd, and sets
     // them to 8, 1846, and 1659 respectively
@@ -55,33 +53,34 @@ const Obj_Destructuring_2 = () => {
 };
 
 // Object Destructuring 3
-// Function that accepts two parameters, firstName and 
+// Function that accepts two parameters, firstName and
 // favoriteColor and returns a prompt telling the user their
 // name and their favorite color. If no firstName is passed
 // in, firstName is undefined. if favoriteColor is not passed
 // in, it defaults to green.
-const getUserData = ({ firstName, favoriteColor = "green" }) => (
-    `Your name is ${firstName} and you like ${favoriteColor}`
-);
+const getUserData = ({ firstName, favoriteColor = "green" }) =>
+    `Your name is ${firstName} and you like ${favoriteColor}`;
 
+// Object Destructuring 3
 const Obj_Destructuring_3 = () => {
-    
     // prints message with firstName=Alejandro and favoriteColor
     // being purple
-    console.log(getUserData({ firstName: "Alejandro", favoriteColor: "purple" }));
-    
+    console.log(
+        getUserData({ firstName: "Alejandro", favoriteColor: "purple" })
+    );
+
     // prints message with firstName being Melissa and
     // favoriteColor being green, the default
     console.log(getUserData({ firstName: "Melissa" }));
 
     // prints message with firstName being undefined as no
-    // default was defined and favoriteColor being green, the 
+    // default was defined and favoriteColor being green, the
     // default.
     console.log(getUserData({}));
 };
 
+// Array Destructuring 1
 const Arr_Destructuring_1 = () => {
-
     // Declares three variables and destructures the contents
     // of an array into those variables
     let [first, second, third] = ["Maya", "Marisa", "Chi"];
@@ -94,4 +93,32 @@ const Arr_Destructuring_1 = () => {
 
     // Prints variable third which contains "Chi"
     console.log(third);
-}
+};
+
+// Array Destructuring 2
+const Arr_Destructuring_2 = () => {
+    // Declares an array with variable raindrops containing the 
+    // first string, whiskers containing the second string,
+    // and aFewOfMyFavoriteThings containing the rest of the
+    // strings.
+    let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
+        "Raindrops on roses",
+        "whiskers on kittens",
+        "Bright copper kettles",
+        "warm woolen mittens",
+        "Brown paper packages tied up with strings",
+    ];
+
+    // prints "Raindrops on Roses" to console
+    console.log(raindrops);
+    
+    // prints "whiskers on kittens" to console
+    console.log(whiskers);
+
+    // prints an array containing [
+    //     "Bright copper kettles",
+    //     "warm woolen mittens",
+    //     "Brown paper packages tied up with strings"
+    // ] to console
+    console.log(aFewOfMyFavoriteThings);
+};
