@@ -135,3 +135,28 @@ const arr_destructuring_3 = () => {
     // prints numbers array
     console.log(numbers); // [10, 30, 20]
 };
+
+// ES5 Assigning Variables to Object Properties
+//var obj = {
+//    numbers: {
+//        a: 1,
+//        b: 2,
+//    },
+//};
+//
+//var a = obj.numbers.a;
+//var b = obj.numbers.b;
+
+// ES2015_Object_Destructuring
+const ES2015_Object_Destructuring = () => {
+    let obj = {
+        numbers: {
+            a: 1,
+            b: 2,
+        }
+    };
+
+    let {numbers: {a, b}} = obj;
+    console.log(a);
+    console.log(b);
+}
