@@ -149,14 +149,40 @@ const arr_destructuring_3 = () => {
 
 // ES2015_Object_Destructuring
 const ES2015_Object_Destructuring = () => {
+    // Declares object containing one object
     let obj = {
         numbers: {
             a: 1,
             b: 2,
-        }
+        },
     };
 
-    let {numbers: {a, b}} = obj;
+    // Uses nested destructuring to pull a & b from obj.numbers
+    let {
+        numbers: { a, b },
+    } = obj;
+
+    // prints a and b
     console.log(a);
     console.log(b);
+};
+
+// ES5 Array Swap
+const es5_array_swap = () => {
+    var arr = [1, 2];
+    var temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+};
+
+// ES2015_one_line_swap_destructuring
+const es2015_array_swap = () => {
+    // Declares two integer array
+    let arr = [1,2];
+
+    // Uses destructuring to swap array
+    [arr[1], arr[0]] = [arr[0], arr[1]];
+
+    // Prints array to console
+    console.log(arr);
 }
