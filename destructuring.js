@@ -186,3 +186,13 @@ const es2015_array_swap = () => {
     // Prints array to console
     console.log(arr);
 }
+
+// raceResults
+const raceResults = ([first, second, third, ...rest]) => ({
+    first, second, third, rest
+})
+
+//getRaceResults
+const getRaceResults = () => {
+    console.log(raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre']));
+}
