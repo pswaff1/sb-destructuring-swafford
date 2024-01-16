@@ -27,3 +27,25 @@ const Obj_Destructuring_1 = () => {
     // to the console
     console.log(yearNeptuneDiscovered);
 }
+
+// Object Destructuring 2
+const Obj_Destructuring_2 = () => {
+    // Declares an object with three attributes: numPlanets, 
+    // yearNeptuneDiscovered, and yearMarsDiscoverd, and sets 
+    // them to 8, 1846, and 1659 respectively
+    let planetFacts = {
+        numPlanets: 8,
+        yearNeptuneDiscovered: 1846,
+        yearMarsDiscovered: 1659
+    };
+
+    // Destructures numPlanets from PlanetFacts into its own
+    // variable, the remaining attributes are destructured into 
+    // discoveryYears array using the rest operator
+    let {numPlanets, ...discoveryYears} = planetFacts;
+
+    // prints the discoveryYears array onto the console. This
+    // array contains yearNeptuneDiscoverd which is 1846 and
+    // yearMarsDiscovered, which is 1659
+    console.log(discoveryYears);
+}
