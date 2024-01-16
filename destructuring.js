@@ -97,7 +97,7 @@ const Arr_Destructuring_1 = () => {
 
 // Array Destructuring 2
 const Arr_Destructuring_2 = () => {
-    // Declares an array with variable raindrops containing the 
+    // Declares an array with variable raindrops containing the
     // first string, whiskers containing the second string,
     // and aFewOfMyFavoriteThings containing the rest of the
     // strings.
@@ -111,7 +111,7 @@ const Arr_Destructuring_2 = () => {
 
     // prints "Raindrops on Roses" to console
     console.log(raindrops);
-    
+
     // prints "whiskers on kittens" to console
     console.log(whiskers);
 
@@ -121,4 +121,17 @@ const Arr_Destructuring_2 = () => {
     //     "Brown paper packages tied up with strings"
     // ] to console
     console.log(aFewOfMyFavoriteThings);
+};
+
+// Array Destructuring 3
+const arr_destructuring_3 = () => {
+    // Declares numbers array
+    let numbers = [10, 20, 30];
+
+    // Uses array destructuring to swap the second and third
+    // elements of the array
+    [numbers[1], numbers[2]] = [numbers[2], numbers[1]];
+
+    // prints numbers array
+    console.log(numbers); // [10, 30, 20]
 };
