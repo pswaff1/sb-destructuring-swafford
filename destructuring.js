@@ -2,8 +2,12 @@
 // Patrick Swafford
 // Springboard Software Development Career Program
 
+// Note some given content was reformatted to ES2015 and placed
+// into arrays as appropriate
+
 // Object Destructuring 1
 const Obj_Destructuring_1 = () => {
+    
     // Declares an object with two attributes: numPlanets and
     // yearNeptuneDiscovered and sets them to 8 and 1846
     // respectively
@@ -29,6 +33,7 @@ const Obj_Destructuring_1 = () => {
 
 // Object Destructuring 2
 const Obj_Destructuring_2 = () => {
+    
     // Declares an object with three attributes: numPlanets,
     // yearNeptuneDiscovered, and yearMarsDiscoverd, and sets
     // them to 8, 1846, and 1659 respectively
@@ -60,6 +65,7 @@ const getUserData = ({ firstName, favoriteColor = "green" }) => (
 );
 
 const Obj_Destructuring_3 = () => {
+    
     // prints message with firstName=Alejandro and favoriteColor
     // being purple
     console.log(getUserData({ firstName: "Alejandro", favoriteColor: "purple" }));
@@ -73,3 +79,19 @@ const Obj_Destructuring_3 = () => {
     // default.
     console.log(getUserData({}));
 };
+
+const Arr_Destructuring_1 = () => {
+
+    // Declares three variables and destructures the contents
+    // of an array into those variables
+    let [first, second, third] = ["Maya", "Marisa", "Chi"];
+
+    // Prints variable first, which contains "Maya"
+    console.log(first);
+
+    // Prints variable second which contains "Marisa"
+    console.log(second);
+
+    // Prints variable third which contains "Chi"
+    console.log(third);
+}
